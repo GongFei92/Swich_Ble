@@ -2,9 +2,7 @@ package com.huicheng.ui;
 
 import org.litepal.crud.DataSupport;
 
-/**
- * Created by Gong on 2018-07-14.
- */
+
 
 public class Book extends DataSupport {
     private int id;

@@ -21,9 +21,6 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-/**
- * Created by Gong on 2018-07-14.
- */
 
 public class OkPostUtils {
     public OkHttpClient mOkHttpClient;

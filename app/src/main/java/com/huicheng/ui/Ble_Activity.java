@@ -50,7 +50,7 @@ import org.litepal.crud.DataSupport;
 public class Ble_Activity extends Activity implements OnClickListener {
 
 	private final static String TAG = Ble_Activity.class.getSimpleName();
-	//蓝牙4.0的UUID,其中0000ffe1-0000-1000-8000-00805f9b34fb是广州汇承信息科技有限公司08蓝牙模块的UUID
+	//蓝牙4.0的UUID,其中0000ffe1-0000-1000-8000-00805f9b34fb是hc08蓝牙模块的UUID
 	public static String HEART_RATE_MEASUREMENT = "0000ffe1-0000-1000-8000-00805f9b34fb";
 	public static String EXTRAS_DEVICE_NAME = "DEVICE_NAME";;
 	public static String EXTRAS_DEVICE_ADDRESS = "DEVICE_ADDRESS";
