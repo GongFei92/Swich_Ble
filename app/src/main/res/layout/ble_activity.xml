@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.huicheng.ui.Ble_Activity">
+     
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="状态："
+            android:layout_marginLeft="10dp"
+            />
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+
+             android:text="未连接"
+             android:id="@+id/connect_state"
+             />
+        <Switch
+
+            android:text="连接后台"
+            android:switchMinWidth="25dp"
+            android:textOn="开"
+            android:textOff="关"
+            android:thumb="@drawable/onethump"
+            android:track="@drawable/tracktoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:paddingLeft="30dp"
+
+            android:id="@+id/switch1" />
+        
+    </LinearLayout>
+    
+
+    
+     <TextView 
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="智能换相系统移动控制终端"
+         android:textSize="20sp"
+         android:textColor="#0000CD"
+         android:gravity="center"
+         android:id="@+id/ming"
+         android:layout_marginTop="15dip"
+            />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/moshi"
+        android:text="手动切换模式"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="20dip"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:gravity="center"
+        android:background="@drawable/button_shape"
+        />
+    <Button
+        android:id="@+id/popupmenu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="popupmenu"
+        android:text="选择终端" 
+        android:layout_marginTop="30dip"
+        android:layout_marginLeft="10dip"
+        android:background="@drawable/btn_oval"
+        />
+    
+     <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dip"
+        >
+       
+         <ImageButton 
+     android:id="@+id/myImageView1"
+     android:background="@drawable/af"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="40dip"
+     />
+           <ImageButton 
+     android:id="@+id/myImageView2"
+     android:background="@drawable/bf"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="40dip"
+     /> 
+        
+           <ImageButton 
+     android:id="@+id/myImageView3"
+     android:background="@drawable/cf"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+    android:layout_marginLeft="40dip"
+     /> 
+        
+        
+    </LinearLayout>
+    
+    <ScrollView
+          android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/rev_sv"
+        android:layout_marginTop="120dip"
+       >
+        <TextView 
+         android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+      android:id="@+id/rev_tv"
+            />
+        
+        
+        
+    </ScrollView>
+
+    
+     
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="#97C8E3" /><!-- 填充的颜色 -->
+    <!-- 设置按钮的四个角为弧形 -->
+    <!-- android:radius 弧形的半径 -->
+    <corners android:topLeftRadius="5dp"
+        android:topRightRadius="5dp"
+        android:bottomRightRadius="5dp"
+        android:bottomLeftRadius="5dp"/>
+    <!-- 边距 -->
+    <padding
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp" />
+    <!-- 边框粗细及颜色 -->
+    <stroke android:width="2dp" android:color="#0072e3" />
+</shape>
