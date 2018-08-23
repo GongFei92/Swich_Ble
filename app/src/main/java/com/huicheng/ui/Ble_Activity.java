@@ -24,6 +24,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -69,7 +72,9 @@ public class Ble_Activity extends Activity implements OnClickListener {
 	private String rev_str = "";
 	//蓝牙service,负责后台的蓝牙服务
 	private static BluetoothLeService mBluetoothLeService;
-	
+	private SheetAdapter sheetAdapter;
+	private RecyclerView rv_sheet;
+
 	PopupMenu popupMenu;
 	Menu men;
 	private Button mButton;
@@ -138,7 +143,18 @@ public class Ble_Activity extends Activity implements OnClickListener {
 		init();
 		kehu_init();
 		mbutton_init();
-		//Toast.makeText(Ble_Activity.this,"0", Toast.LENGTH_SHORT).show(); 
+		//Toast.makeText(Ble_Activity.this,"0", Toast.LENGTH_SHORT).show();
+		rv_sheet = (RecyclerView) findViewById(R.id.rv_sheet);
+		//设置线性布局 Creates a vertical LinearLayoutManager
+		rv_sheet.setLayoutManager(new LinearLayoutManager(this));
+		//设置recyclerView每个item间的分割线
+		rv_sheet.addItemDecoration(new DividerItemDecoration(
+				this, DividerItemDecoration.VERTICAL));
+
+		//创建recyclerView的实例，并将数据传输到适配器
+		sheetAdapter = new SheetAdapter(newsList);
+
+		rv_sheet.setAdapter(sheetAdapter);
 	}
 
 	@Override
@@ -199,17 +215,20 @@ public class Ble_Activity extends Activity implements OnClickListener {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     LitePal.getDatabase();
-                    Book book = new Book(1,"jason","11");
+                    Book book = new Book("zhang","A","120");
                     book.save();
-                    Book book1 = new Book(2,"jerry","22");
+                    Book book1 = new Book("wang","B","48");
                     book1.save();
-                    newsList = DataSupport.findAll(Book.class, 1,2);
-                    Book book2=newsList.get(0);
-                    String str=book2.getName();
+					Book book2 = new Book("liu","C","89");
+					book2.save();
+                    newsList = DataSupport.findAll(Book.class, 1,2,3);
+					sheetAdapter.notifyDataSetChanged();
+                    Book book3=newsList.get(0);
+                    String str=book3.getName();
                     StringBuilder strr=new StringBuilder();
                     strr.append(str).append("-");
-                    book2=newsList.get(1);
-                    str=book2.getName();
+                    book3=newsList.get(1);
+                    str=book3.getName();
                     strr.append(str);
                     Toast.makeText(getApplicationContext(), strr.toString(), Toast.LENGTH_SHORT).show();
                     okinstance.performPostgson(newsList);

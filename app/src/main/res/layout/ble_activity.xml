@@ -52,7 +52,7 @@
          android:textColor="#0000CD"
          android:gravity="center"
          android:id="@+id/ming"
-         android:layout_marginTop="15dip"
+         android:layout_marginTop="15dp"
             />
 
     <Button
@@ -61,8 +61,8 @@
         android:id="@+id/moshi"
         android:text="手动切换模式"
         android:textColor="@android:color/black"
-        android:layout_marginLeft="10dip"
-        android:layout_marginTop="20dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:textSize="18sp"
         android:clickable="true"
         android:gravity="center"
@@ -74,8 +74,8 @@
         android:layout_height="wrap_content"
         android:onClick="popupmenu"
         android:text="选择终端" 
-        android:layout_marginTop="30dip"
-        android:layout_marginLeft="10dip"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/btn_oval"
         />
     
@@ -83,7 +83,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="80dip"
+        android:layout_marginTop="30dp"
         >
        
          <ImageButton 
@@ -91,14 +91,14 @@
      android:background="@drawable/af"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:layout_marginLeft="40dip"
+     android:layout_marginLeft="40dp"
      />
            <ImageButton 
      android:id="@+id/myImageView2"
      android:background="@drawable/bf"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:layout_marginLeft="40dip"
+     android:layout_marginLeft="40dp"
      /> 
         
            <ImageButton 
@@ -106,28 +106,99 @@
      android:background="@drawable/cf"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-    android:layout_marginLeft="40dip"
+    android:layout_marginLeft="40dp"
      /> 
         
         
     </LinearLayout>
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boeder"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="用户"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1.5dip"
+                android:layout_height="fill_parent"
+                android:background="#B4B3B3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="相序"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1.5dip"
+                android:layout_height="fill_parent"
+                android:background="#B4B3B3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dip"
+                android:singleLine="true"
+                android:text="功率"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
     <ScrollView
           android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/rev_sv"
         android:layout_marginTop="120dip"
        >
-        <TextView 
+        <TextView
          android:layout_width="fill_parent"
         android:layout_height="wrap_content"
 
       android:id="@+id/rev_tv"
             />
-        
-        
-        
+
+
+
     </ScrollView>
 
     

@@ -97,7 +97,7 @@ public class MainActivity extends Activity implements OnClickListener {
 					final View  login=getLayoutInflater().inflate(R.layout.dialog, null);
 					
 					
-					new AlertDialog.Builder(v.getContext()) 
+					new AlertDialog.Builder(v.getContext(),AlertDialog.THEME_HOLO_LIGHT)
 					.setView(login)
 					.setTitle("«Î ‰»Î√‹¬Î")
 					.setCancelable(false)

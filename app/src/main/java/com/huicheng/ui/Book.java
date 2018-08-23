@@ -5,15 +5,11 @@ import org.litepal.crud.DataSupport;
 
 
 public class Book extends DataSupport {
-    private int id;
+
     private String name;
     private String password;
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
+    private String power;
+
     public String getName() {
         return name;
     }
@@ -26,15 +22,22 @@ public class Book extends DataSupport {
     public void setPassword(String password) {
         this.password = password;
     }
+    public String getPower() {
+        return power;
+    }
+    public void setPower(String power) {
+        this.power = power;
+    }
     public Book(){ super();}
-    public Book(int id, String name, String password) {
+    public Book(String name, String password,String power) {
         super();
-        this.id = id;
+
         this.name = name;
         this.password = password;
+        this.power = power;
     }
     @Override
     public String toString() {
-        return this.name + "-" + this.password;
+        return this.name + "-" + this.password+"-"+this.power;
     }
 }
